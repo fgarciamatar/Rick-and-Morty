@@ -1,0 +1,35 @@
+.divInput {
+  width: 100%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  margin-bottom: 2%;
+}
+.input {
+  width: 30em;
+  height: 3em;
+  border-radius: .25rem;
+  padding: .385rem .85rem;
+ align-items: center;
+ margin-right: 3%;
+ border-radius:25rem;
+ background-color: #317ed0;
+ color: #fff;
+ &::placeholder {
+  color: #fff;
+  }
+  &:hover {
+    background-color: #043e7d;
+    }
+}
+.button {
+  margin-top: 0.5em;
+  height: 3em;
+  padding: .375rem .75rem;
+  border-radius: 25rem;
+  background-color: #317ed0;
+  color: #fff;
+  &:hover {
+  background-color: #043e7d;
+  cursor: pointer;
+  }
+}

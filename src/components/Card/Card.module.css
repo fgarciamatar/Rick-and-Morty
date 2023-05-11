@@ -1,0 +1,54 @@
+.tarjeta {
+position: relative;
+justify-content: center;
+margin: 2em;
+padding-top: 1em;
+width: 20rem;
+display:flex;
+flex-direction: column;
+background-color: rgba(53, 49, 49, 0.638);
+transition: background-color 0.7s ease-in-out;
+border-radius: 32px;
+&:hover {
+  background-color: rgba(11, 124, 229, 0.843);
+  }
+}
+.imagen {
+  width: 15em;
+   padding:0;
+   border-radius: 50%;
+   border-style:solid;
+   border-color: rgb(0, 0, 0);
+  
+} 
+.boton {
+
+    background-color: #1577e0;
+    color: antiquewhite;
+    margin-top: 0.7em;
+    padding: 0.7em;
+    border-radius: 50%;
+    border: 1px solid black;
+    width: 2rem;
+    height: 2rem;
+    text-align: center;
+    &:hover {
+        background-color: #145ba7;
+        cursor: pointer;
+        }
+}
+.nombre {
+
+  width: 8em;
+  padding-bottom: 0.7em;
+  padding-top: 0.7em;
+  background-color: #1577e0;
+  border-radius: 2em;
+  /* position: absolute; */
+  left:2.2em;
+}
+.info {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: medium;
+  
+}

@@ -1,0 +1,17 @@
+.Title {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+.Image {
+	height: 12rem;
+}
+.Image:hover {
+	filter: brightness(150%);
+}
+@media (max-width: 550px) {
+	.Image {
+		height: 8rem;
+	}
+}
