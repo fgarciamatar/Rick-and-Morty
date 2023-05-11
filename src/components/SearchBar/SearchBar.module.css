@@ -1,6 +1,5 @@
 .divInput {
   width: 100%;
-  padding-top: 2%;
   padding-bottom: 2%;
   margin-bottom: 2%;
 }
@@ -14,6 +13,7 @@
  border-radius:25rem;
  background-color: #317ed0;
  color: #fff;
+ box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.9);
  &::placeholder {
   color: #fff;
   }
@@ -28,6 +28,7 @@
   border-radius: 25rem;
   background-color: #317ed0;
   color: #fff;
+  box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.9);
   &:hover {
   background-color: #043e7d;
   cursor: pointer;

@@ -8,8 +8,8 @@ import Title from "./components/Title/Title.jsx"
 function App() {
    return (
       <div className='App'>
+          <Title />
          <SearchBar onSearch={(characterID) => window.alert(characterID)} />
-         {/* <Title /> */}
          <Cards characters={characters} />
          {/* <Card
             id={Rick.id}

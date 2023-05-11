@@ -7,10 +7,14 @@ width: 20rem;
 display:flex;
 flex-direction: column;
 background-color: rgba(53, 49, 49, 0.638);
-transition: background-color 0.7s ease-in-out;
+transition: background-color 1s ease-in-out;
 border-radius: 32px;
+border: solid rgba(255, 255, 255, 0.751);
+
 &:hover {
   background-color: rgba(11, 124, 229, 0.843);
+  box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.9);
+  transition: background-color 1s ease-in-out;
   }
 }
 .imagen {
@@ -19,36 +23,43 @@ border-radius: 32px;
    border-radius: 50%;
    border-style:solid;
    border-color: rgb(0, 0, 0);
-  
+   box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.9);
+   display: flex;
+   align-self:center;
 } 
 .boton {
-
     background-color: #1577e0;
     color: antiquewhite;
-    margin-top: 0.7em;
+    margin-right: 1em;
     padding: 0.7em;
     border-radius: 50%;
-    border: 1px solid black;
+    border: 2px solid black;
     width: 2rem;
     height: 2rem;
     text-align: center;
+    box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.9);
+    display: flex;
+    align-self:flex-end;
     &:hover {
         background-color: #145ba7;
         cursor: pointer;
         }
 }
 .nombre {
-
   width: 8em;
   padding-bottom: 0.7em;
   padding-top: 0.7em;
+  padding-left: 0.8em;
   background-color: #1577e0;
+  color:#ffffff;
   border-radius: 2em;
-  /* position: absolute; */
-  left:2.2em;
+  display: flex;
+  align-self:center;
+  text-align: center;
+
 }
 .info {
   font-family: 'Courier New', Courier, monospace;
   font-size: medium;
-  
+  color:#ffffff;
 }

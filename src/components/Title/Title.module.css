@@ -3,13 +3,14 @@
 	justify-content: center;
 	align-items: center;
 	width: 100%;
+	padding: 0em;
+	margin: 0em;
 }
 .Image {
-	height: 12rem;
+	height: 20rem;
+	
 }
-.Image:hover {
-	filter: brightness(150%);
-}
+
 @media (max-width: 550px) {
 	.Image {
 		height: 8rem;
