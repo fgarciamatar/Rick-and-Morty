@@ -1,28 +1,47 @@
-import './App.css';
-import Card from './components/Card/Card';
-import Cards from './components/Cards/Cards';
-import SearchBar from './components/SearchBar/SearchBar';
-import characters, { Rick } from './data.js';
-import Title from "./components/Title/Title.jsx"
+import "./App.css";
+import Cards from "./components/Cards/Cards";
+import About from "./components/About/About"
+import Detail from "./components/Detail/Detail"
+import Title from "./components/Title/Title";
+import axios from "axios";
+
+import Nav from "./components/Nav/Nav";
+import { useState } from "react";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
-   return (
-      <div className='App'>
-          <Title />
-         <SearchBar onSearch={(characterID) => window.alert(characterID)} />
-         <Cards characters={characters} />
-         {/* <Card
-            id={Rick.id}
-            name={Rick.name}
-            status={Rick.status}
-            species={Rick.species}
-            gender={Rick.gender}
-            origin={Rick.origin.name}
-            image={Rick.image}
-            onClose={() => window.alert('Emulamos que se cierra la card')}
-         /> */}
-      </div>
-   );
+  const [characters, setCharacters] = useState([]);
+
+  function onSearch(id) {
+    axios(`https://rickandmortyapi.com/api/character/${id}`).then(
+      ({ data }) => {
+        if (!characters.find(char => char.id === data.id)) {
+          if (data.name) {
+            setCharacters((oldChars) => [...oldChars, data]);
+          } else {
+            window.alert("¡No hay personajes con este ID!");
+          }
+        }else{
+          alert(`Ya se agrego el personaje con este ID: ${id}`)
+        }
+      }
+    ).catch(() => window.alert("¡No hay personajes con este ID!"))
+  }
+  function onClose(id) {
+    setCharacters(characters.filter(personaje => personaje.id !== Number(id)))
+  }
+  return (
+    <div className="App">
+
+      <Nav onSearch={onSearch} />
+      <Routes>
+        <Route path="/" element={<Title/>}></Route>
+        <Route path="/home" element={<Cards characters={characters} onClose={onClose} /> }> </Route>
+        <Route path="/about" element={<About></About>}></Route>
+      <Route path="/detail/:id" element={<Detail></Detail>}></Route>
+      </Routes>
+    </div>
+  );
 }
 
 export default App;

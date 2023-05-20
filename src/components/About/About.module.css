@@ -1,0 +1,23 @@
+.container {
+    margin-top: 3em;
+    margin: 2em;
+    padding-top: 1em;
+    width: 90vw;
+    display:flex;
+    flex-direction: column;
+    background: #0878e8cd;  
+background: -webkit-linear-gradient(to right,rgba(11, 124, 229, 0.843), #2791fc72);  
+background: linear-gradient(to right, #3498db, #03386ebd);
+border-radius: 32px;
+border: solid rgba(255, 255, 255, 0.751);
+&:hover {
+  box-shadow: 4px 4px 7px rgba(255, 255, 255, 0.9);
+}
+
+
+}
+h1{
+    font-family:cursive;
+    color: rgb(255, 255, 255);
+  
+}

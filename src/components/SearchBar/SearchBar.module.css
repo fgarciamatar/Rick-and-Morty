@@ -1,36 +1,39 @@
 .divInput {
   width: 100%;
-  padding-bottom: 2%;
-  margin-bottom: 2%;
+  padding-top: 1em;
+  padding-bottom: 1.5em;
 }
 .input {
   width: 30em;
-  height: 3em;
+  padding: 1em 1.5em;
   border-radius: .25rem;
-  padding: .385rem .85rem;
  align-items: center;
  margin-right: 3%;
  border-radius:25rem;
- background-color: #317ed0;
+ /* background-color: #317ed0; */
+ background: #0878e8cd;  
+background: -webkit-linear-gradient(to right,rgba(2, 133, 255, 0.843), #2791fc72);  
+background: linear-gradient(to right, #3498db, #0c6bcabd);
  color: #fff;
  box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.9);
  &::placeholder {
   color: #fff;
   }
   &:hover {
-    background-color: #043e7d;
+    background-color: #037dff;
     }
 }
 .button {
-  margin-top: 0.5em;
-  height: 3em;
-  padding: .375rem .75rem;
+  margin:1em;
+  padding: 1em 1.5em;
   border-radius: 25rem;
-  background-color: #317ed0;
+  background: #0878e8cd;  
+  background: -webkit-linear-gradient(to right,rgba(11, 124, 229, 0.843), #0a75e089);  
+  background: linear-gradient(to right, #3498db, #0654a2bd);
   color: #fff;
   box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.9);
   &:hover {
-  background-color: #043e7d;
+  background-color: #037dff;
   cursor: pointer;
   }
 }
