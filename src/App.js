@@ -1,44 +1,74 @@
 import "./App.css";
 import Cards from "./components/Cards/Cards";
-import About from "./components/About/About"
-import Detail from "./components/Detail/Detail"
-import Title from "./components/Title/Title";
+import About from "./components/About/About";
+import Detail from "./components/Detail/Detail";
+import Form from "./components/Form/Form";
 import axios from "axios";
 
 import Nav from "./components/Nav/Nav";
-import { useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
 
 function App() {
+  // Hooks
+  const { pathname } = useLocation();
+  const navigate = useNavigate();
   const [characters, setCharacters] = useState([]);
+  const [access, setAccess] = useState(false);
 
+  useEffect(() => {
+    !access && navigate("/");
+  }, [access]);
+
+  //credencial fake
+  const email = "fgarciamatar@gmail.com";
+  const password = "henry123";
+  //funciones
   function onSearch(id) {
-    axios(`https://rickandmortyapi.com/api/character/${id}`).then(
-      ({ data }) => {
-        if (!characters.find(char => char.id === data.id)) {
+    axios(`https://rickandmortyapi.com/api/character/${id}`)
+      .then(({ data }) => {
+        if (!characters.find((char) => char.id === data.id)) {
           if (data.name) {
             setCharacters((oldChars) => [...oldChars, data]);
           } else {
             window.alert("¡No hay personajes con este ID!");
           }
-        }else{
-          alert(`Ya se agrego el personaje con este ID: ${id}`)
+        } else {
+          alert(`Ya se agrego el personaje con este ID: ${id}`);
         }
-      }
-    ).catch(() => window.alert("¡No hay personajes con este ID!"))
+      })
+      .catch(() => window.alert("¡No hay personajes con este ID!"));
   }
+
   function onClose(id) {
-    setCharacters(characters.filter(personaje => personaje.id !== Number(id)))
+    setCharacters(
+      characters.filter((personaje) => personaje.id !== Number(id))
+    );
   }
+
+  const login = (userData) => {
+    if (userData.email === email && userData.password === password) {
+      setAccess(true);
+      navigate("/home");
+    } else {
+      alert("Credenciales Incorrectas");
+    }
+  };
+  // Render
+
   return (
     <div className="App">
-
-      <Nav onSearch={onSearch} />
+      {pathname !== "/" && <Nav onSearch={onSearch} />}
       <Routes>
-        <Route path="/" element={<Title/>}></Route>
-        <Route path="/home" element={<Cards characters={characters} onClose={onClose} /> }> </Route>
+        <Route path="/" element={<Form login={login}></Form>}></Route>
+        <Route
+          path="/home"
+          element={<Cards characters={characters} onClose={onClose} />}
+        >
+          {" "}
+        </Route>
         <Route path="/about" element={<About></About>}></Route>
-      <Route path="/detail/:id" element={<Detail></Detail>}></Route>
+        <Route path="/detail/:id" element={<Detail></Detail>}></Route>
       </Routes>
     </div>
   );
