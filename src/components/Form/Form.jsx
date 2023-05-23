@@ -18,38 +18,47 @@ export default function Form({ login }) {
     const value = event.target.value;
 
     setUserData({ ...userData, [property]: value });
-    validation({ ...userData, [property]: value }, errors, setErrors);
+    setErrors(validation({ ...userData, [property]: value }));
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
     login(userData);
-  }
+  };
   return (
     <div className={style.container}>
+      {/* <img src="https://w7.pngwing.com/pngs/530/120/png-transparent-rick-sanchez-from-rick-and-morty-rick-sanchez-television-show-animation-rick-and-morty-television-child-food.png" /> */}
       <form onSubmit={handleSubmit}>
-        <label htmlFor="">Email: </label>
-        <input
-          name="email"
-          type="text"
-          placeholder="Email..."
-          className={style.input}
-          value={userData.email}
-          onChange={handleChange}
-        />
-        <p>{errors.email}</p>
+        <label htmlFor="Email" className={style.containerInput}>
+          Email:
+          <input
+            className={style.input}
+            name="email"
+            type="text"
+            placeholder="Email..."
+            value={userData.email}
+            onChange={handleChange}
+          />
+        </label>
+        <p className={style.error}>{errors.email}</p>
         <br />
-        <label htmlFor="">Password: </label>
-        <input
-          name="password"
-          type="password"
-          className={style.input}
-          value={userData.password}
-          onChange={handleChange}
-        />
-         <p>{errors.password}</p>
+
+        <label htmlFor="password" className={style.containerInput}>
+          Password:
+          <input
+            className={style.input}
+            name="password"
+            type="password"
+            value={userData.password}
+            onChange={handleChange}
+          />
+        </label>
+        <p className={style.error}>{errors.password}</p>
         <br />
-        <button type="submit" className={style.boton}>Submit</button>
+
+        <button type="submit" className={style.boton}>
+          Submit
+        </button>
       </form>
     </div>
   );

@@ -3,6 +3,7 @@ import style from "./About.module.css"
 
 export default function About() {
   return (
+   
     <div className={style.container}>
       <h1>App de rick and Morty</h1>
       
@@ -10,5 +11,6 @@ export default function About() {
       <h3>Acerca de mi</h3>
       <p>blablablabla</p>
     </div>
+    
   )
 }

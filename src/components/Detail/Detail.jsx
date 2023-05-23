@@ -23,6 +23,7 @@ export default function Detail() {
   return (
     <div>
       {characterDetail ? (
+        <div className="divContainer">
         <div className={style.container}>
           <div className={style.containerImagen}>
             <img className={style.imagen} src={characterDetail.image} alt="" />
@@ -34,6 +35,7 @@ export default function Detail() {
             <h4 className={style.info}>Origin: {characterDetail.origin?.name}</h4>
             <h4 className={style.info}>Type: {characterDetail.type}</h4>
           </div>
+        </div>
         </div>
       ) : (
         ""
