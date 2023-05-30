@@ -5,7 +5,7 @@ justify-content: center;
 align-items: center;
 flex-direction: column;
 margin: 2em;
-padding: 1em 0;
+padding: 0.5em 0;
 width: 20rem;
 background-color: rgba(53, 49, 49, 0.638);
 transition: background-color 1s ease-in-out;
@@ -19,19 +19,22 @@ border: solid rgba(255, 255, 255, 0.751);
   }
 }
 .imagen {
+  margin-top:2em;
   width: 15em;
-   padding:0;
    border-radius: 50%;
    border-style:solid;
    border-color: rgb(0, 0, 0);
-   box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.9);
+   box-shadow: 3px 3px 7px rgba(255, 255, 255, 0.9);
    display: flex;
    align-self:center;
 } 
 .boton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin:0.6em 1em;
     background-color: #1577e0;
     color: antiquewhite;
-     margin-right: 1em;
     border-radius: 50%;
     border: 2px solid black;
     width: 2.5rem;
@@ -46,15 +49,37 @@ border: solid rgba(255, 255, 255, 0.751);
 }
 .nombre {
   width: 8em;
-  padding: 0.7em;
   background-color: #1577e0;
   color:#ffffff;
   border-radius: 2em;
+  padding: 0.8em;
   text-align: center;
-
+  border: solid #00000066;
+  &:hover {
+    box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.9);
+    transition: background-color 1s ease-in-out;
+    }
 }
-.info {
-  font-family: 'Courier New', Courier, monospace;
-  font-size: medium;
-  color:#ffffff;
+.linkNombre {
+  text-decoration: none;/*PRARA QUITAR EL SUBRAYADO DEL NOMBRE*/
+}
+
+.fav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin:0.6em 1em;
+  border-radius: 50%;
+  border: 2px solid black;
+  width: 2.5rem;
+  height: 2.5rem;
+  text-align:center;
+  background-color:rgba(53, 49, 49, 0.638);
+  box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.9);
+  align-self:flex-end;
+  &:hover {
+    background-color: rgba(167, 202, 236, 0.601);
+    box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.9);
+    transition: background-color 1s ease-in-out;
+    }
 }

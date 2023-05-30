@@ -3,6 +3,7 @@ import Cards from "./components/Cards/Cards";
 import About from "./components/About/About";
 import Detail from "./components/Detail/Detail";
 import Form from "./components/Form/Form";
+import Favorites from "./components/Favorites/Favorites"
 import axios from "axios";
 
 import Nav from "./components/Nav/Nav";
@@ -12,9 +13,9 @@ import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
 function App() {
   // Hooks
   const { pathname } = useLocation();
-  const navigate = useNavigate();
   const [characters, setCharacters] = useState([]);
   const [access, setAccess] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     !access && navigate("/");
@@ -23,7 +24,9 @@ function App() {
   //credencial fake
   const email = "fgarciamatar@gmail.com";
   const password = "henry123";
-  //funciones
+
+  //Funciones
+
   function onSearch(id) {
     axios(`https://rickandmortyapi.com/api/character/${id}`)
       .then(({ data }) => {
@@ -54,6 +57,11 @@ function App() {
       alert("Credenciales Incorrectas");
     }
   };
+
+  const logout = () => {
+    setAccess(false);
+    navigate("/");
+  }
   // Render
 
   return (
@@ -68,6 +76,7 @@ function App() {
           {" "}
         </Route>
         <Route path="/about" element={<About></About>}></Route>
+        <Route path="/favorites" element={<Favorites></Favorites>}></Route>
         <Route path="/detail/:id" element={<Detail></Detail>}></Route>
       </Routes>
     </div>

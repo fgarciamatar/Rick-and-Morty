@@ -1,5 +1,5 @@
 import React from "react";
-import Title from "../../components/Form/Form";
+import image from "../../imagenes/login.png";
 import validation from "./validation";
 import style from "../../components/Form/Form.module.css";
 import { useState } from "react";
@@ -27,7 +27,7 @@ export default function Form({ login }) {
   };
   return (
     <div className={style.container}>
-      {/* <img src="https://w7.pngwing.com/pngs/530/120/png-transparent-rick-sanchez-from-rick-and-morty-rick-sanchez-television-show-animation-rick-and-morty-television-child-food.png" /> */}
+      <img src={image} />
       <form onSubmit={handleSubmit}>
         <label htmlFor="Email" className={style.containerInput}>
           Email:

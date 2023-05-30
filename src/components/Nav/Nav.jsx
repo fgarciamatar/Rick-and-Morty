@@ -6,7 +6,6 @@ export default function Nav(props) {
   return (
     <div className={style.container}>
       <SearchBar onSearch={props.onSearch}/>
-      
     </div>
   );
 }
