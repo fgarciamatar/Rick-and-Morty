@@ -24,11 +24,11 @@ function Favorites({ myFavorites }) {
         <option  value="D">Descendente</option>
       </select>
       <select onChange={handleFilter} name="Filter">
+        <option  value="allCharacters">All Characters</option>
         <option  value="Male">Male</option>
         <option  value="Female">Female</option>
         <option  value="Genderless">Genderless</option>
         <option  value="unknown">unknown</option>
-        <option  value="allCharacters">all Characters</option>
       </select>
       {myFavorites?.map(
         ({ name, status, species, gender, origin, image, id, onClose }) => (

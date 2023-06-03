@@ -58,10 +58,10 @@ function App() {
     }
   };
 
-  const logout = () => {
-    setAccess(false);
-    navigate("/");
-  }
+  // const logout = () => {
+  //   setAccess(false);
+  //   navigate("/");
+  // }
   // Render
 
   return (
