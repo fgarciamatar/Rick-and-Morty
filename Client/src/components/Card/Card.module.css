@@ -1,0 +1,99 @@
+.tarjeta {
+position: relative;
+display:flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+margin: 2em;
+padding: 0.5em 0;
+width: 20rem;
+background-color: rgba(53, 49, 49, 0.638);
+transition: background-color 1s ease-in-out;
+border-radius: 32px;
+border: solid rgba(255, 255, 255, 0.751);
+
+&:hover {
+  background-color: rgba(11, 124, 229, 0.843);
+  box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.9);
+  transition: background-color 1s ease-in-out;
+  }
+}
+.imagen {
+  margin-top:2em;
+  width: 15em;
+   border-radius: 50%;
+   border-style:solid;
+   border-color: rgb(0, 0, 0);
+   box-shadow: 3px 3px 7px rgba(255, 255, 255, 0.9);
+   display: flex;
+   align-self:center;
+} 
+.boton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin:0.6em 1em;
+    background-color: #1577e0;
+    color: antiquewhite;
+    border-radius: 50%;
+    border: 2px solid black;
+    width: 2.5rem;
+    height: 2.5rem;
+    text-align:center;
+    box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.9);
+    align-self:flex-end;
+    &:hover {
+        background-color: #145ba7;
+        cursor: pointer;
+        }
+}
+.disabledBtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin:0.6em 1em;
+    background-color: #4e565f5c;
+    color: rgba(250, 235, 215, 0.155);
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, 0.479);
+    width: 2.5rem;
+    height: 2.5rem;
+    text-align:center;
+    align-self:flex-end;
+}
+.nombre {
+  width: 8em;
+  background-color: #1577e0;
+  color:#ffffff;
+  border-radius: 2em;
+  padding: 0.8em;
+  text-align: center;
+  border: solid #00000066;
+  &:hover {
+    box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.9);
+    transition: background-color 1s ease-in-out;
+    }
+}
+.linkNombre {
+  text-decoration: none;/*PRARA QUITAR EL SUBRAYADO DEL NOMBRE*/
+}
+
+.fav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin:0.6em 1em;
+  border-radius: 50%;
+  border: 2px solid black;
+  width: 2.5rem;
+  height: 2.5rem;
+  text-align:center;
+  background-color:rgba(53, 49, 49, 0.638);
+  box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.9);
+  align-self:flex-end;
+  &:hover {
+    background-color: rgba(167, 202, 236, 0.601);
+    box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.9);
+    transition: background-color 1s ease-in-out;
+    }
+}

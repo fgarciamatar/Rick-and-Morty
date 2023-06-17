@@ -1,0 +1,92 @@
+.divInput {
+  background-color: #4747474c;
+  width: 100%;
+  padding: 0.2em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.container1 {
+  display: flex;
+  flex-direction: row;
+  margin: 0.2em 5em;
+}
+
+.input {
+  margin: 0.5em;
+  padding: 0.8em 0.8em;
+  align-items: center;
+  border-radius: 25rem;
+  /* FONDO */
+  background-color: #4747474c;
+  color: #fff;
+  box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.9);
+  &::placeholder {
+    color: #fff;
+  }
+  &:hover {
+    background: #0878e8cd;
+    background: -webkit-linear-gradient(
+      to right,
+      rgba(2, 133, 255, 0.843),
+      #2791fc72
+    );
+    background: linear-gradient(to right, #3498db, #0c6bcabd);
+    color: #fff;
+    cursor: pointer;
+  }
+}
+.button {
+  margin: 1em 0.4em;
+  padding: 0.8em 1em;
+  border-radius: 25rem;
+  background-color: #474747be;
+  color: #fff;
+  box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.9);
+  &:hover {
+    background: #0878e8cd;
+    background: -webkit-linear-gradient(
+      to right,
+      rgba(2, 133, 255, 0.843),
+      #2791fc72
+    );
+    background: linear-gradient(to right, #3498db, #0c6bcabd);
+    color: #fff;
+    cursor: pointer;
+  }
+}
+
+.botonActive { /*PARA MOSTAR OTRO COLOR CUANDO ESTAMS EN DETERMINADA RUTA*/
+  margin: 1em;
+  padding: 0.8em 1em;
+  border-radius: 25rem;
+  background-color: #474747be;
+  color: #fff;
+  box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.9);
+    background: #0878e8cd;
+    background: -webkit-linear-gradient(
+      to right,
+      rgba(2, 133, 255, 0.843),
+      #2791fc72
+    );
+    color: #fff;
+    cursor: pointer;
+}
+.botonOff {
+  margin: 1em 0.4em;
+  padding: 0.8em 1em;
+  border-radius: 25rem;
+  background-color: #47474759;
+  color: #100f0fd2;
+}
+
+.inputOff {
+  margin: 0.5em;
+  padding: 0.8em 0.8em;
+  align-items: center;
+  border-radius: 25rem;
+
+  /* FONDO */
+  background-color: #47474759;
+  color: #100f0fd2;
+}
