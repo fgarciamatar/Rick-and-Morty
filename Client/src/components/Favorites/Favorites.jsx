@@ -43,7 +43,7 @@ function Favorites({ myFavorites }) {
             species={species}
             gender={gender}
             image={image}
-            origin={origin.name}
+            origin={origin}
           />
         )
       )}

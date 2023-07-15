@@ -1,13 +1,13 @@
-import "./App.css";
-import Cards from "./components/Cards/Cards";
-import About from "./components/About/About";
-import Detail from "./components/Detail/Detail";
-import Form from "./components/Form/Form";
-import Favorites from "./components/Favorites/Favorites"
 import axios from "axios";
+import { useEffect, useState } from "react";
+import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
+import "./App.css";
+import About from "./components/About/About";
+import Cards from "./components/Cards/Cards";
+import Detail from "./components/Detail/Detail";
+import Favorites from "./components/Favorites/Favorites";
+import Form from "./components/Form/Form";
 import Nav from "./components/Nav/Nav";
-import { useState, useEffect } from "react";
-import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
 
 function App() {
   // Hooks
@@ -35,13 +35,13 @@ function App() {
       
   }
 
-  function onClose(id) {
+  const  onClose = (id) => {
     setCharacters(
-      characters.filter((personaje) => personaje.id !== Number(id))
+      characters.filter((personaje) => personaje.id !== id)
     );
   }
 
-  async function  login(userData) {
+  const login = async (userData) => {
     const { email, password } = userData;
     const URL = 'http://localhost:3001/rickandmorty';
     try{
@@ -54,6 +54,11 @@ function App() {
       alert(data.message);
     }
  }
+
+ const loginAsGuest = () => {
+  setAccess(true);
+  navigate("/home");
+};
 
   
   const getRandom = () => { //funcion para agregar personajes random
@@ -68,7 +73,7 @@ function App() {
     <div className="App">
       {pathname !== "/" && <Nav onSearch={onSearch}  getRandom={getRandom}/>}
       <Routes>
-        <Route path="/" element={<Form login={login}></Form>}></Route>
+        <Route path="/"  element={<Form login={login} loginAsGuest={loginAsGuest} />}></Route>
         <Route
           path="/home"
           element={<Cards characters={characters} onClose={onClose} />}

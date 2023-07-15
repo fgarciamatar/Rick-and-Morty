@@ -3,7 +3,7 @@ display:flex;
 flex-direction: column;
 justify-content: center;
 max-width:max-content;
-height: 34em;
+height: 40em;
 /* //para centra */
 align-items: center;
 position: absolute;
@@ -11,13 +11,13 @@ top: 50%;
 left: 50%;
 transform: translate(-50%, -50%);
 
-background-color: #474747a1;
+background-color: #6e676773;
 transition: box-shadow 1s ease-in-out;
 border-radius: 32px;
 border: solid  #1212127b;
 
 &:hover {
-    background-color: #626262a1;
+ 
   box-shadow: 5px 5px 10px  #037dff;
   transition: box-shadow 1s ease-in-out;
   color: #fff;
@@ -26,11 +26,11 @@ border: solid  #1212127b;
 }
 
 .input {
-    margin:0.5em 0.7em 0.3em 0.7em;
+    margin: 0em 0.5em;
     width: 20em;
-    padding: 0.5em;
-    border-radius: .25rem;
-   align-items: center;
+    padding: 0.7em 0.9em;
+    align-items: center; 
+    
    border-radius:25rem;
    color: #fff;
    background: -webkit-linear-gradient(to right,rgba(3, 133, 255, 0.843), #2791fc72);  
@@ -49,14 +49,16 @@ border: solid  #1212127b;
  margin-top:0.3em ;
 }
 .boton {
-    font-size: medium;
-    padding: 1em 1.5em;
+  margin: 0.5em 0em;
+    width: 20em;
+    font-size:larger;
+    padding: 0.7em 0.9em;
     border-radius: 25rem;
-    background-color: #474747b0;
+    background-color: #6e6767b0;
   color: #fff;
     box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.9);
     &:hover {
-        background: #0878e8cd;
+        background: #0b71d771;
         background: -webkit-linear-gradient(
           to right,
           rgba(2, 133, 255, 0.843),
@@ -66,13 +68,22 @@ border: solid  #1212127b;
 }
 .containerInput{
     margin:0em 1em;
-    text-align: right;
     color: #ffffff;
-    font-size: medium;
+    font-size:large;
     
 }
 
-.container img {
-    margin:  2em;
-    width: 14em;
+
+.Title {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	padding: 0em;
+	margin: 0em;
 }
+.Image {
+	height: 15rem;
+	
+}
+
